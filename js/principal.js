@@ -1,4 +1,6 @@
 var pacientes = document.querySelectorAll('.paciente');
+var titulo = document.querySelector('.titulo');
+titulo.textContent = "Aparecida Nutricionista";
 
 for (i = 0 ; i < pacientes.length ; i++) {
     var paciente = pacientes[i];
@@ -29,4 +31,12 @@ for (i = 0 ; i < pacientes.length ; i++) {
         var imc = peso / (altura * altura);
         tdImc.textContent = imc.toFixed(2);
     }
+}
+
+//titulo.addEventListener("click", mostraMensagem);
+titulo.addEventListener("click", function(){
+    console.log("Clique da função anonima");
+});
+function mostraMensagem(){
+    console.log("Ola, eu fui clicado");
 }
